@@ -1,0 +1,12 @@
+.image { 
+   position: relative; 
+}
+
+.text-overlay { 
+   position: absolute; 
+   top: 200px; 
+   left: 25px; 
+   width: 100%; 
+   font-size: 80px;
+   color: #fff;
+}

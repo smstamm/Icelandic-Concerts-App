@@ -1,14 +1,72 @@
 <!DOCTYPE html>
 
 <html ng-app="concertApp">
+
 <head>
-	<link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link href="main.css" type="text/css" rel="stylesheet">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-	<script src="app.js"></script>
 	<title>Icelandic Concerts</title>
 </head>
+
 <body ng-controller="concertController">
-	<h1>Icelandic Concerts</h1>
-	<ul>{{data}}</ul>
+<!-- 	
+	<div class="jumbotron">
+		<img class="img-responsive" src="images/concert-graphic.jpg" alt="Generic Concert Graphic">
+		<h1 class="text-overlay">Icelandic Concerts</h1>
+	</div>
+ -->
+<!-- 	<div class="media">
+	  <div class="media-left">
+	    <a href="#">
+	      <img class="media-object" ng-src="{{data.imageSource}}" alt="Concert Image">
+	    </a>
+	  </div>
+	  <div class="media-body">
+	    <h4 class="media-heading">{{data.userGroupName}}</h4>
+	  </div>
+	</div> -->
+
+	<div class="container">
+
+		<div class="row">
+
+<!-- 		  <div class="col-md-9">
+ -->
+		  <div class="col-md-4" ng-repeat="datum in data">
+		    <div class="thumbnail">
+		      <img src="{{datum.imageSource}}" alt="Upcoming Concert Image">
+		      <div class="caption">
+		        <h3>{{datum.eventDateName}}</h3>
+		        	<p>{{datum.dateOfShow | date: "EEEE, d MMM  yyyy"}}</p>
+		        	<p>{{datum.dateOfShow | date: "H:mm @"}}</p>
+		        	<p>{{datum.eventHallName}}</p>
+		      </div>
+		    </div>
+		  </div>
+
+<!-- 		</div>
+ --><!-- 
+
+			<div class="col-md-3">
+				<div class="col-md-3">
+					<p>Find a ride to the concert</p>
+					<p>{{data.from}}</p>
+					<p>{{data.to}}</p>
+					<p>{{data.date}}</p>
+					<p>{{data.time}}</p>
+					<p>{{data.link}}</p>
+				</div>
+			</div> -->
+
+		</div>
+
+	</div>
+
+<!-- Module -->
+	<script src="app.js"></script>
+
 </body>
 </html>	
