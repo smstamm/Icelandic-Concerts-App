@@ -4,9 +4,20 @@
 
 .text-overlay { 
    position: absolute; 
-   top: 200px; 
-   left: 25px; 
+   top: 25px; 
+   left: 20px; 
    width: 100%; 
    font-size: 80px;
    color: #fff;
+}
+
+.transbox
+{
+  margin: 0px;
+  background-color: #fff;
+  opacity:0.6;
+}
+
+.jumbotron {
+	background-image: url("images/concert-graphic.jpg");
 }
