@@ -14,6 +14,16 @@
 
 <body ng-controller="concertController">
 	
+<!-- MAIN NAV -->
+<nav>
+</nav>
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+<input type="text" id="search">
+<!-- TODO: ADD FILTER TO SEARCH
+TODO: ADD MAIN NAV -->
+
+
+
 <!-- JUMBOTRON HEADER -->
 	<div class="jumbotron">
 		<div class="transbox">
@@ -21,35 +31,39 @@
 		</div>
 	</div>
 
+
 <!-- CONCERT LISTING -->
 	<div class="container">
 		
 		<div class="row">
 			
-			<div class="col-md-6">
+			<div class="col-lg-8 col-sm-12">
 				<h1>Concerts near you</h1>
-				<div class="media" ng-repeat="concert in concerts">
-				  <div class="media-left">
-				      <img class="media-object" ng-src="{{concert.imageSource}}" alt="Concert Image">
-				  </div>
-				  <div class="media-body">
-				    <h4 class="media-heading">{{concert.userGroupName}}</h4>
-				    	<p>{{concert.dateOfShow | date: "EEEE, d MMM  yyyy"}}</p>
-			        	<p>{{concert.dateOfShow | date: "H:mm @"}}</p>
+				<div class="col-lg-6 col-sm-9" ng-repeat="concert in concerts">
+					<div class="media panel panel-default">
+					  <div class="media-body panel-heading">
+					    <h4 class="media-heading panel-title">{{concert.userGroupName}}</h4>
+					  </div>
+					  <div class="panel-body">
+						  <div class="media-left">
+						      <img class="media-object" ng-src="{{concert.imageSource}}" alt="Concert Image">
+						  </div>  
+				    	<p>{{concert.dateOfShow | date: "EEEE, d MMM  yyyy @ H:mm"}}</p>
 			        	<p>{{concert.eventHallName}}</p>
-				  </div>
+					  </div>
+					</div>
 				</div>
 			</div>
 
 <!-- RIDE SHARE LISTING -->
-			<div class="col-md-6">
+			<div class="col-lg-4 col-sm-12">
 				<div>
 					<h1>Share a ride</h1>
 					<div ng-repeat="carpool in carpools">
 <!-- 						<img float="right" scr="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png" alt="Vehicle graphic"> -->
-						<p>From:	{{carpool.from}}</p>
-						<p>To:	{{carpool.to}}</p>
-						<p>When:	{{carpool.date | date: 'EEEE, d MMM  yyyy'}} @ {{carpool.time}}</p>
+						<p><strong>From: </strong>{{carpool.from}}</p>
+						<p><strong>To: </strong>{{carpool.to}}</p>
+						<p><strong>When: </strong>{{carpool.date | date: 'EEEE, d MMM  yyyy'}} @ {{carpool.time}}</p>
 						<a target="_blank" href="{{carpool.link}}">Click to request a ride</a>
 						<hr>
 					</div>
@@ -63,10 +77,16 @@
 	</div>
 
 
+<!-- FOOTER -->
+<footer>&#169 <script language="javascript" type="text/javascript">
+	var today = new Date()
+	var year = today.getFullYear()
+	document.write(year)
+</script></footer>
+
+
 <!-- MODULE -->
 	<script src="app.js"></script>
-
-<!-- TODO: footer -->
 
 </body>
 </html>	
