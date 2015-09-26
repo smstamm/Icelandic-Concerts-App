@@ -13,15 +13,6 @@
 </head>
 
 <body ng-controller="concertController">
-	
-<!-- MAIN NAV -->
-<nav>
-</nav>
-<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-<input type="text" id="search">
-<!-- TODO: ADD FILTER TO SEARCH
-TODO: ADD MAIN NAV -->
-
 
 
 <!-- JUMBOTRON HEADER -->
@@ -32,6 +23,12 @@ TODO: ADD MAIN NAV -->
 	</div>
 
 
+<!-- SEARCH BAR -->
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+<input type="text" placeholder="Search concerts" ng-model="search">
+<!-- TODO: ADD FILTER TO SEARCH
+
+
 <!-- CONCERT LISTING -->
 	<div class="container">
 		
@@ -39,7 +36,7 @@ TODO: ADD MAIN NAV -->
 			
 			<div class="col-lg-8 col-sm-12">
 				<h1>Concerts near you</h1>
-				<div class="col-lg-6 col-sm-9" ng-repeat="concert in concerts">
+				<div class="col-lg-6 col-sm-9" ng-repeat="concert in concerts | filter: search | orderBy: date">
 					<div class="media panel panel-default">
 					  <div class="media-body panel-heading">
 					    <h4 class="media-heading panel-title">{{concert.userGroupName}}</h4>
