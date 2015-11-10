@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 	<link href="main.css" type="text/css" rel="stylesheet">
-	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.5/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha256-JcgoO7qVianjbv43Z5KinReHzk9/rEZg5m6z/ZZy3DI= sha512-rYMbEYJa5+7VkGdfAypdYHqwIdCNEBKh8lhKUNIv58tgHQuHHzXC/Bzf66BFDkTjq970Lc6OIEpgllKINGDCKQ==" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/slate/bootstrap.min.css" rel="stylesheet" integrity="sha256-JcgoO7qVianjbv43Z5KinReHzk9/rEZg5m6z/ZZy3DI= sha512-rYMbEYJa5+7VkGdfAypdYHqwIdCNEBKh8lhKUNIv58tgHQuHHzXC/Bzf66BFDkTjq970Lc6OIEpgllKINGDCKQ==" crossorigin="anonymous">
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
 	<title>Icelandic Concerts</title>
@@ -18,24 +18,24 @@
 <!-- JUMBOTRON HEADER -->
 	<div class="jumbotron">
 		<div class="transbox">
-			<h1>Icelandic Concerts<br><small>a blend of harmony and ambiance</small></h1>
+			<h1>Icelandic Concerts<br><small>go rock your socks off</small></h1>
 		</div>
 	</div>
 
 
+<!-- SEARCH BAR -->
+<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+<input type="text" placeholder="Search concerts" ng-model="search">
+<!-- TODO: ADD FILTER TO SEARCH
 
 
 <!-- CONCERT LISTING -->
 	<div class="container">
 		
-		<!-- SEARCH BAR -->
-		<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-		<input type="text" placeholder="Search concerts" ng-model="search">
-
 		<div class="row">
 			
 			<div class="col-lg-8 col-sm-12">
-				<h1>Can't Miss Concerts</h1>
+				<h1>Concerts near you</h1>
 				<div class="col-lg-6 col-sm-9" ng-repeat="concert in concerts | filter: search | orderBy: date">
 					<div class="media panel panel-default">
 					  <div class="media-body panel-heading">
@@ -53,7 +53,7 @@
 			</div>
 
 <!-- RIDE SHARE LISTING -->
-			<div class="col-lg-4 col-sm-12 well">
+			<div class="col-lg-4 col-sm-12">
 				<div>
 					<h1>Share a ride</h1>
 					<div ng-repeat="carpool in carpools">
@@ -79,7 +79,7 @@
 	var today = new Date()
 	var year = today.getFullYear()
 	document.write(year)
-</script> Stephanie Stamm</footer>
+</script></footer>
 
 
 <!-- MODULE -->

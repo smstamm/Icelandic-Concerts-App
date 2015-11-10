@@ -19,10 +19,10 @@
 }
 
 .jumbotron {
-	background-image: url("images/concert-graphic.jpg");
+	background-image: url("images/concert-bw.jpg");
   background-repeat: no-repeat;
 }
 
-.panel-title, .panel-heading {
-  background-color: gray;
+.media-object {
+  margin: 10px;
 }
