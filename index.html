@@ -23,8 +23,6 @@
 	</div>
 
 
-
-
 <!-- CONCERT LISTING -->
 	<div class="container">
 		
@@ -57,7 +55,6 @@
 				<div>
 					<h1>Share a ride</h1>
 					<div ng-repeat="carpool in carpools">
-<!-- 						<img float="right" scr="https://cdn2.iconfinder.com/data/icons/windows-8-metro-style/512/car-.png" alt="Vehicle graphic"> -->
 						<p><strong>From: </strong>{{carpool.from}}</p>
 						<p><strong>To: </strong>{{carpool.to}}</p>
 						<p><strong>When: </strong>{{carpool.date | date: 'EEEE, d MMM  yyyy'}} @ {{carpool.time}}</p>
@@ -65,25 +62,21 @@
 						<hr>
 					</div>
 				</div>
-
 			</div>
-	
-		</div>
-		
-		</div>
-	</div>
+		</div><!-- CLOSE ROW -->
+	</div><!-- CLOSE CONTAINER -->
 
 
 <!-- FOOTER -->
-<footer>&#169 <script language="javascript" type="text/javascript">
-	var today = new Date()
-	var year = today.getFullYear()
-	document.write(year)
-</script> Stephanie Stamm</footer>
+	<footer>&#169 <script language="javascript" type="text/javascript">
+		var today = new Date()
+		var year = today.getFullYear()
+		document.write(year)
+	</script> Stephanie Stamm</footer>
 
 
 <!-- MODULE -->
-	<script src="app.js"></script>
+<script src="app.js"></script>
 
 </body>
 </html>	
