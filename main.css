@@ -1,28 +1,28 @@
 .image { 
-   position: relative; 
+	position: relative; 
 }
 
 .text-overlay { 
-   position: absolute; 
-   top: 25px; 
-   left: 20px; 
-   width: 100%; 
-   font-size: 80px;
-   color: #fff;
+	position: absolute; 
+	top: 25px; 
+	left: 20px; 
+	width: 100%; 
+	font-size: 80px;
+	color: #fff;
 }
 
 .transbox
 {
-  margin: 0px;
-  background-color: #fff;
-  opacity:0.6;
+	margin: 0px;
+	background-color: #fff;
+	opacity:0.6;
 }
 
 .jumbotron {
 	background-image: url("images/concert-bw.jpg");
-  background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
 
 .media-object {
-  margin: 10px;
+	margin: 10px;
 }
